@@ -1,6 +1,6 @@
 const User = require('./user')
 const Clothing = require('./clothing')
-const Type = require('./type')
+// const Type = require('./type')
 
 /**
  * If we had any associations to make, this would be a great place to put them!
@@ -19,9 +19,8 @@ const Type = require('./type')
 User.hasMany(Clothing)
 Clothing.belongsTo(User)
 
-Clothing.hasOne(Type)
-Type.belongsToMany(Clothing)
 
 module.exports = {
-  User
+  User,
+  Clothing
 }
