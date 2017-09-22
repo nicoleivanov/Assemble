@@ -36,7 +36,7 @@ export const auth = (email, password, method) =>
         history.push('/home')
       })
       .catch(error =>
-        dispatch(getUser({error})))
+        dispatch(getUser({error: error})))
 
 export const logout = () =>
   dispatch =>

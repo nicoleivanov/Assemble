@@ -33,18 +33,22 @@ const createApp = () => {
   // logging middleware
   app.use(morgan('dev'))
 
-  // body parsing middleware
+  // body parsing middleware; sets up req.body
   app.use(bodyParser.json())
   app.use(bodyParser.urlencoded({ extended: true }))
 
-  // session middleware with passport
+  // sets up req.session; session middleware creator (configuring each incoming req.session) to use with passport
   app.use(session({
     secret: process.env.SESSION_SECRET || 'my best friend is Cody',
     store: sessionStore,
     resave: false,
     saveUninitialized: false
   }))
+
+  // sets up req.login
   app.use(passport.initialize())
+  
+  // sets up req.user
   app.use(passport.session())
 
   // auth and api routes
