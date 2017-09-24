@@ -1,18 +1,26 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import PropTypes from 'prop-types'
+import {logout} from '../store'
 
 /**
  * COMPONENT
  */
-export const UserHome = (props) => {
-  const {email} = props
+class UserHome extends Component {
+  constructor(props) {
+    super(props)
+  }
 
-  return (
-    <div>
-      <h3>Welcome, {email}</h3>
-    </div>
-  )
+  render() {
+    const {email} = this.props
+    
+      return (
+        <div>
+          <h3>Welcome, {email}</h3>
+        </div>
+      )
+  }
+  
 }
 
 /**

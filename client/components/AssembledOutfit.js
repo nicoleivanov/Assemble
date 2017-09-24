@@ -1,20 +1,9 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {fetchOutfit} from '../store'
 
-export class OutfitForm extends Component {
+export class AssembledOutfit extends Component {
   constructor(props) {
     super(props)
-    this.handleSubmit = this.handleSubmit.bind(this)
-  }
-
-  handleSubmit(event) {
-    event.preventDefault()
-    const outfitProps = {
-      weather: event.target.weather.value,
-      setting: event.target.setting.value
-    }
-    this.props.sendOutfitProps(outfitProps)
   }
 
   render() {
@@ -56,9 +45,9 @@ const mapStateToProps = state => {
 const mapDispatchToProps = (dispatch, ownHistory) => {
   return {
     sendOutfitProps(oProps) {
-      dispatch(fetchOutfit(oProps))
+      dispatch
     }
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(OutfitForm)
+export default connect(mapStateToProps, mapDispatchToProps)(AssembledOutfit)
