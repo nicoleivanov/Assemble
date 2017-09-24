@@ -20,7 +20,7 @@ const clothings = [
     id: 3, category: 'top', color: ['black', 'white'], setting: ['casual'], weather: ['warm', 'hot'], imageUrl: 'https://i.pinimg.com/736x/89/0b/57/890b57dca0a3a740948af4517c5f399f--black-crop-tops-tops-crop.jpg'
   },
   { // flowy half button down
-    id: 4, category: 'top', color: ['green'], setting: ['work', 'casual'], weather: ['cold', 'warm'], imageUrl: 'https://i.pinimg.com/736x/89/0b/57/890b57dca0a3a740948af4517c5f399f--black-crop-tops-tops-crop.jpg'
+    id: 4, category: 'top', color: ['green'], setting: ['work', 'casual'], weather: ['cold', 'warm'], imageUrl: 'https://i.pinimg.com/736x/20/f6/93/20f6938e69885bcd95a6fc499ec45c62--green-blouse-green-shirt.jpg'
   },
   { // bow dress
     id: 5, category: 'full body', color: ['grey', 'black'], setting: ['work'], weather: ['warm', 'hot'], imageUrl: 'http://www.stories.com/Content/ProductContent/0201731001/0201731001_2_100011.jpg'
@@ -33,6 +33,9 @@ const clothings = [
   },
   { // medium wash skinny jeans
     id: 8, category: 'bottom', color: ['blue'], setting: ['casual'], weather: ['cold', 'warm', 'hot'], imageUrl: 'http://lp.hm.com/hmprod?set=key[source],value[/model/2016/D00%200399136%20004%2097%204998.jpg]&set=key[rotate],value[]&set=key[width],value[]&set=key[height],value[]&set=key[x],value[]&set=key[y],value[]&set=key[type],value[STILL_LIFE_FRONT]&set=key[hmver],value[1]&set=key[quality],value[80]&set=key[size],value[346x405]&call=url[file:/mobile/v2/product]'
+  },
+  { // medium wash daisy denim shorts
+    id: 9, category: 'bottom', color: ['blue'], setting: ['casual'], weather: ['warm', 'hot'], imageUrl: 'https://i.pinimg.com/736x/55/51/ab/5551ab19d521ea5bae6434142a06961c--denim-cutoffs-jeans-shorts.jpg'
   }
 ]
 

@@ -4,8 +4,9 @@ import {Router} from 'react-router'
 import {Route, Switch} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import history from './history'
-import {Main, Login, Signup, UserHome} from './components'
-import {me} from './store'
+import {Main, Login, Signup, UserHome, AllClothing} from './components'
+import store from './store'
+import {me, fetchAllClothing} from './store'
 
 /**
  * COMPONENT
@@ -13,6 +14,7 @@ import {me} from './store'
 class Routes extends Component {
   componentDidMount () {
     this.props.loadInitialData()
+    store.dispatch(fetchAllClothing())
   }
 
   render () {
@@ -30,6 +32,7 @@ class Routes extends Component {
                 <Switch>
                   {/* Routes placed here are only available after logging in */}
                   <Route path='/home' component={UserHome} />
+                  <Route path='/clothing' component={AllClothing} />
                 </Switch>
             }
             {/* Displays our Login component as a fallback */}

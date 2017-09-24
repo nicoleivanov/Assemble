@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 
-export class OutfitForm extends Component {
+export class AllClothing extends Component {
   constructor(props) {
     super(props)
   }
@@ -30,4 +30,4 @@ export const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(OutfitForm)
+export default connect(mapStateToProps)(AllClothing)

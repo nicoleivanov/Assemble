@@ -88,7 +88,7 @@ const syncDb = (input) => db.sync(input)
 // if we wanted to require our app in a test spec
 if (require.main === module) {
   sessionStore.sync()
-    .then(() => syncDb({force: true}))
+    .then(() => syncDb())
     .then(createApp)
     .then(startListening)
 } else {

@@ -35,8 +35,9 @@ export default function (state = defaultClothing, action) {
 export const fetchAllClothing = () => {
   return async dispatch => {
     try {
-      const clothingObjs = await axios.get('/api/clothing')
-      const clothing = clothingObjs.data
+      const response = await axios.get('/api/clothing')
+      const clothing = await response.data
+      console.log('clothing', clothing)
       dispatch(getClothing(clothing))
     } catch(e) {
       console.error(e)
