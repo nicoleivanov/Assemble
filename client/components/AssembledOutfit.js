@@ -7,30 +7,20 @@ export class AssembledOutfit extends Component {
   }
 
   render() {
-    const { allClothing } = this.props
+    const { outfit } = this.props
     return (
       <div>
-       <form onSubmit={this.handleSubmit}>
-        <div>
-          <label>Weather</label>
-          <select name="weather">
-            <option key="cold" value="cold">cold</option>
-            <option key="warm" value="warm">warm</option>
-            <option key="hot" value="hot">hot</option>
-          </select>
-        </div>
-        <div>
-          <label>Setting</label>
-          <select name="setting">
-            <option key="casual" value="casual">casual</option>
-            <option key="work" value="work">work</option>
-            <option key="going out" value="going out">going out</option>
-          </select>
-        </div>
-        <div>
-          <button type="submit">Submit</button>
-        </div>
-       </form>
+        <h1>render me</h1>
+        {
+          typeof outfit === "object" ?
+          outfit.pieces.map(piece => {
+            return (
+              <div key={piece.id}>
+                <img src={piece.imageUrl}/>
+              </div>
+            )
+          }) : <h1>outfit not found</h1>
+        }
       </div>
     )
   }
@@ -38,16 +28,16 @@ export class AssembledOutfit extends Component {
 
 const mapStateToProps = state => {
   return {
-    allClothing: state.clothing
+    outfit: state.outfit
   }
 }
 
-const mapDispatchToProps = (dispatch, ownHistory) => {
-  return {
-    sendOutfitProps(oProps) {
-      dispatch
-    }
-  }
-}
+// const mapDispatchToProps = (dispatch, ownHistory) => {
+//   return {
+//     sendOutfitProps(oProps) {
+//       dispatch
+//     }
+//   }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(AssembledOutfit)
+export default connect(mapStateToProps)(AssembledOutfit)

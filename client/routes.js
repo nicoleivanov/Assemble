@@ -4,7 +4,7 @@ import {Router} from 'react-router'
 import {Route, Switch} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import history from './history'
-import {Main, Login, Signup, UserHome, AllClothing, OutfitForm, AssembledOutfit} from './components'
+import {Main, Login, Signup, UserHome, AllClothing, OutfitForm, AssembledOutfit, ImageUpload} from './components'
 import store from './store'
 import {me, fetchAllClothing} from './store'
 
@@ -34,6 +34,7 @@ class Routes extends Component {
                   <Route path='/clothing' component={AllClothing} />
                   <Route path='/outfitAssembler' component={OutfitForm} />
                   <Route path='/assembledOutfit' component={AssembledOutfit} />
+                  <Route path='/imageUpload' component={ImageUpload} />
                 </Switch>
             }
             {/* Displays our Login component as a fallback */}

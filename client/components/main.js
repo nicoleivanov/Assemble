@@ -34,6 +34,7 @@ class Main extends Component {
                   <a href='#' onClick={handleClick}>Logout</a>
                   <Link to='/clothing'>My Clothes</Link>
                   <Link to='/outfitAssembler'>Outfit Assembler</Link>
+                  <Link to='/imageUpload'>Add Clothing</Link>
                 </div>
                 : <div>
                   {/* The navbar will show these links before you log in */}

@@ -29,7 +29,7 @@ const clothings = [
     id: 6, category: 'full body', color: ['maroon'], setting: ['going out'], weather: ['warm', 'hot'], imageUrl: 'https://img1.etsystatic.com/135/2/9883262/il_fullxfull.871365989_oh73.jpg'
   },
   { // black cropped pants
-    id: 7, category: 'bottom', color: ['black'], setting: ['work'], weather: ['warm', 'hot'], imageUrl: 'https://i.pinimg.com/736x/2f/98/5a/2f985a9785de96131f4375c981148912--black-cropped-trousers-black-crop-pants.jpg'
+    id: 7, category: 'bottom', color: ['black'], setting: ['work'], weather: ['cold', 'warm', 'hot'], imageUrl: 'https://i.pinimg.com/736x/2f/98/5a/2f985a9785de96131f4375c981148912--black-cropped-trousers-black-crop-pants.jpg'
   },
   { // medium wash skinny jeans
     id: 8, category: 'bottom', color: ['blue'], setting: ['casual'], weather: ['cold', 'warm', 'hot'], imageUrl: 'http://lp.hm.com/hmprod?set=key[source],value[/model/2016/D00%200399136%20004%2097%204998.jpg]&set=key[rotate],value[]&set=key[width],value[]&set=key[height],value[]&set=key[x],value[]&set=key[y],value[]&set=key[type],value[STILL_LIFE_FRONT]&set=key[hmver],value[1]&set=key[quality],value[80]&set=key[size],value[346x405]&call=url[file:/mobile/v2/product]'

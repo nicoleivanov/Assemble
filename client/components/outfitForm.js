@@ -1,11 +1,15 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {fetchOutfit} from '../store'
+import store, {fetchOutfit, clearOutfit} from '../store'
 
 export class OutfitForm extends Component {
   constructor(props) {
     super(props)
     this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  componentDidMount() {
+    store.dispatch(clearOutfit())
   }
 
   handleSubmit(event) {
@@ -21,7 +25,7 @@ export class OutfitForm extends Component {
     const { allClothing } = this.props
     return (
       <div>
-       <form onSubmit={this.handleSubmit}>
+       <form onSubmit={(evt) => this.handleSubmit(evt)}>
         <div>
           <label>Weather</label>
           <select name="weather">
@@ -53,10 +57,10 @@ const mapStateToProps = state => {
   }
 }
 
-const mapDispatchToProps = (dispatch, ownHistory) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     sendOutfitProps(oProps) {
-      dispatch(fetchOutfit(oProps))
+      dispatch(fetchOutfit(oProps, ownProps.history))
     }
   }
 }
