@@ -4,12 +4,14 @@ import thunkMiddleware from 'redux-thunk'
 import user from './user'
 import clothing from './clothing'
 import outfit from './outfit'
+import imageUpload from './imageUpload'
 
 const reducer = combineReducers(
   {
     user, 
     clothing,
-    outfit
+    outfit,
+    imageUpload
   }
 )
 const middleware = applyMiddleware(thunkMiddleware, createLogger({collapsed: true}))
@@ -19,3 +21,4 @@ export default store
 export * from './user'
 export * from './clothing'
 export * from './outfit'
+export * from './imageUpload'

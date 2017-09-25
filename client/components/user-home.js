@@ -13,9 +13,10 @@ class UserHome extends Component {
 
   render() {
     const {email} = this.props
-    
+    const divStyle = {
+      backgroundImage: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Pink_Tartan_at_2014_World_MasterCard_Fashion_Week.jpg"}
       return (
-        <div>
+        <div style = {divStyle}>
           <h3>Welcome, {email}</h3>
         </div>
       )

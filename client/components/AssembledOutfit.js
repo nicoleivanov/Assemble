@@ -10,9 +10,9 @@ export class AssembledOutfit extends Component {
     const { outfit } = this.props
     return (
       <div>
-        <h1>render me</h1>
+        <h1>Assembled Outfit</h1>
         {
-          typeof outfit === "object" ?
+          typeof outfit.pieces === "object" ?
           outfit.pieces.map(piece => {
             return (
               <div key={piece.id}>

@@ -37,7 +37,6 @@ export const fetchAllClothing = () => {
     try {
       const response = await axios.get('/api/clothing')
       const clothing = await response.data
-      console.log('clothing', clothing)
       dispatch(getClothing(clothing))
     } catch(e) {
       console.error(e)

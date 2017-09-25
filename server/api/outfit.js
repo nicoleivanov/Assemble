@@ -51,12 +51,13 @@ router.post('/', async (req, res, next) => {
           setting: { $contains: [req.body.setting]}
         }
       })
+      console.log('clothing', clothing)
       randomNum = Math.floor(Math.random() * (clothing.length))
       let top = clothing[randomNum]
       if(!top) {
         return res.json("Outfit not found")
       }
-      outfit.pieces.unshift()
+      outfit.pieces.unshift(top)
     }
     return res.json(outfit)
   } catch(e) {
