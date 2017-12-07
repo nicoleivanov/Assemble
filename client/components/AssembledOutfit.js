@@ -32,12 +32,5 @@ const mapStateToProps = state => {
   }
 }
 
-// const mapDispatchToProps = (dispatch, ownHistory) => {
-//   return {
-//     sendOutfitProps(oProps) {
-//       dispatch
-//     }
-//   }
-// }
 
 export default connect(mapStateToProps)(AssembledOutfit)

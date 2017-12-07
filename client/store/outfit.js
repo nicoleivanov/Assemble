@@ -43,7 +43,6 @@ export const fetchOutfit = (outfitProps, history) => {
     try {
       const response = await axios.post('/api/outfit', outfitProps)
       const outfit = await response.data
-      console.log('outfit', outfit)
       dispatch(getOutfit(outfit))
       history.push('/assembledOutfit')
     } catch(e) {

@@ -14,7 +14,6 @@ router.post('/', async (req, res, next) => {
     })
     let randomNum = Math.floor(Math.random() * (clothing.length))
     const firstPiece = clothing[randomNum]
-    console.log('firstPiece', firstPiece.dataValues)
     const outfit = {
       pieces: []
     }
@@ -23,7 +22,7 @@ router.post('/', async (req, res, next) => {
     }
     if(firstPiece.category === 'full body') {
       outfit.pieces.push(firstPiece)
-      return res.json(firstPiece)
+      return res.json(outfit)
     } else {
       outfit.pieces.push(firstPiece)
     }
@@ -51,7 +50,6 @@ router.post('/', async (req, res, next) => {
           setting: { $contains: [req.body.setting]}
         }
       })
-      console.log('clothing', clothing)
       randomNum = Math.floor(Math.random() * (clothing.length))
       let top = clothing[randomNum]
       if(!top) {
